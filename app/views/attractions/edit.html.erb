@@ -1,4 +1,10 @@
 <%= form_for @attraction do |f| %>
-  <%= render 'form' %>
+  <%= render partial: 'form', locals: {f: f} %>
   <%= f.submit "Update Attraction" %>
+<% end %>
+
+
+<%= form_for @attraction do |f| %>
+  <%= render partial: 'form', locals: {f: f} %>
+  <%= f.submit "Create Attraction" %>
 <% end %>
