@@ -3,13 +3,13 @@ class ApplicationController < ActionController::Base
 
   def home
   end
-  
+
   def logged_in?
     session[:user_id]
   end
 
   def current_user
-    @user = session[:user_id] || nil
+    @user = User.find(session[:user_id]) || nil
   end
-  
+
 end
