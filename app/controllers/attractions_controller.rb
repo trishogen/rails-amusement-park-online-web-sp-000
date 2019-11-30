@@ -9,4 +9,10 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find(params[:id])
     @ride = @attraction.rides.build(user_id: current_user.id)
   end
+
+  def new
+  end
+
+  def create
+  end
 end
