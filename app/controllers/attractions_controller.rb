@@ -6,6 +6,6 @@ class AttractionsController < ApplicationController
 
   def show
     @attraction = Attraction.find(params[:id])
-    @ride = Ride.new
+    @ride = @attraction.rides.build(user_id: current_user.id)
   end
 end
