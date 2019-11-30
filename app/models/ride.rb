@@ -22,7 +22,7 @@ class Ride < ActiveRecord::Base
 
       self.user.update(tickets: tickets_after, nausea: nausea_after,
       happiness: happiness_after)
-      return "Thanks for riding the #{self.attraction.name}."
+      return "Thanks for riding the #{self.attraction.name}!"
     end
 
   end
